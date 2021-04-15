@@ -1,3 +1,7 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/carpe-diem/" : "/"
+  publicPath: process.env.NODE_ENV === "production" ? "/carpe-diem/" : "/",
+  pwa: {
+    name: "carpe-diem",
+    workboxPluginMode: "GenerageSW"
+  }
 };
