@@ -26,6 +26,7 @@ export default {
      */
     refreshApp() {
       this.updateExists = false;
+      console.debug("refreshApp...");
       if (this.workerRegistration && this.workerRegistration.waiting) {
         this.workerRegistration.waiting.postMessage({ type: "SKIP_WAITING" });
       }
