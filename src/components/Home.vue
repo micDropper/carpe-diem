@@ -1,6 +1,6 @@
 <template>
   <div>
-    Home 9
+    Home 10
   </div>
 </template>
 
