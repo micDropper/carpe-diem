@@ -1,28 +1,37 @@
 <template>
   <div class="container">
-    <b-button @click="toast('b-toaster-bottom-right', true)" class="mb-2"
-      >b-toaster-bottom-right</b-button
+    <Home />
+    <b-toast
+      id="update-toast"
+      no-auto-hide
+      toaster="b-toaster-bottom-right"
+      header-class="d-none"
     >
+      New content available!
+      <b-button @click="refreshApp" variant="primary" size="sm" class="mx-1"
+        >Refresh</b-button
+      >
+    </b-toast>
   </div>
 </template>
 
 <script>
+import Home from "./components/Home.vue";
+import update from "./mixins/update";
+
 export default {
   name: "App",
-  data() {
-    return {
-      counter: 0
-    };
+  components: {
+    Home
   },
-  methods: {
-    toast(toaster, append = false) {
-      this.counter++;
-      this.$bvToast.toast(`Toast ${this.counter} body content`, {
-        title: `Toaster ${toaster}`,
-        toaster: toaster,
-        solid: true,
-        appendToast: append
-      });
+  mixins: [update],
+  watch: {
+    updateExists: function(newUpdateExists) {
+      if (newUpdateExists) {
+        this.$bvToast.show("update-toast");
+      } else {
+        this.$bvToast.hide("update-toast");
+      }
     }
   }
 };
