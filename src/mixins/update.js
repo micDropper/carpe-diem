@@ -28,6 +28,7 @@ export default {
       this.updateExists = false;
       if (!this.workerRegistration || !this.workerRegistration.waiting) return;
       console.debug("refreshApp...");
+      console.log(this.workerRegistration);
       this.workerRegistration.waiting.postMessage({ type: "SKIP_WAITING" });
     }
   },
