@@ -17,7 +17,7 @@ export default {
      */
     handleServiceWorkerUpdated(event) {
       console.log(event, "handleServiceWorkerUpdated: event");
-      this.workerRegistration = event.payload;
+      this.workerRegistration = event.detail;
       this.updateExists = true;
     },
 

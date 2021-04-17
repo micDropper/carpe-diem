@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
     updated(registration) {
       console.log("New content is available; please refresh.");
       document.dispatchEvent(
-        new CustomEvent("serviceWorkerUpdated", { payload: registration })
+        new CustomEvent("serviceWorkerUpdated", { detail: registration })
       );
     },
     offline() {
