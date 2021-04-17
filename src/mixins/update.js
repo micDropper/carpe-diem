@@ -26,9 +26,9 @@ export default {
      */
     refreshApp() {
       this.updateExists = false;
+      console.log(this.workerRegistration, "workerRegistration");
       if (!this.workerRegistration || !this.workerRegistration.waiting) return;
       console.debug("refreshApp...");
-      console.log(this.workerRegistration);
       this.workerRegistration.waiting.postMessage({ type: "SKIP_WAITING" });
     }
   },
