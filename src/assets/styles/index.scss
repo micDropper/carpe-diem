@@ -1,0 +1,13 @@
+// Custom variable overrides
+$font-family-site-title: "Caveat", cursive;
+$font-family-base: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$dark: #2e2e2e;
+$gray-800: $dark;
+// Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";
+
+// BootstrapVue and its default variables
+@import "~bootstrap-vue/src/index.scss";

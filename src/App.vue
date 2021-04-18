@@ -1,20 +1,17 @@
 <template>
-  <div class="container">
-    <Home />
-    <update-toast />
+  <div>
+    <Header />
+    <div class="container">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
-import Home from "./components/Home.vue";
-import UpdateToast from "./components/UpdateToast.vue";
-
+import Header from "./components/Header.vue";
 export default {
-  name: "App",
-  components: {
-    Home,
-    UpdateToast
-  }
+  components: { Header },
+  name: "App"
 };
 </script>
 

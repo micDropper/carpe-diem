@@ -3,8 +3,8 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import BootstrapVue from "bootstrap-vue";
 import PortalVue from "portal-vue";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
+import "./assets/styles/index.scss";
+import router from "./router";
 
 Vue.use(BootstrapVue);
 Vue.use(PortalVue);
@@ -12,5 +12,6 @@ Vue.use(PortalVue);
 Vue.config.productionTip = true;
 
 new Vue({
+  router,
   render: h => h(App)
 }).$mount("#app");
