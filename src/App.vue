@@ -11,10 +11,12 @@
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
+import update from "./mixins/update";
 
 export default {
   components: { Header, Footer },
-  name: "App"
+  name: "App",
+  mixins: [update]
 };
 </script>
 

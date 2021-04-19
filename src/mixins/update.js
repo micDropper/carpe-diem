@@ -16,7 +16,6 @@ export default {
      * @param {CustomEvent} event
      */
     handleServiceWorkerUpdated(event) {
-      console.log(event, "handleServiceWorkerUpdated: event");
       this.workerRegistration = event.detail;
       this.updateExists = true;
     },
@@ -27,9 +26,7 @@ export default {
      */
     refreshApp() {
       this.updateExists = false;
-      console.log(this.workerRegistration, "workerRegistration");
       if (!this.workerRegistration || !this.workerRegistration.waiting) return;
-      console.debug("refreshApp...");
       this.workerRegistration.waiting.postMessage({ type: "SKIP_WAITING" });
     }
   },
