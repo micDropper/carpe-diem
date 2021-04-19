@@ -1,11 +1,159 @@
-// Custom variable overrides
+/**
+ * The custom scss for this project. We provide any custom styles and any bootstrap overrides, 
+ * then import the bootstrap scss.
+ */
+
+/* ----------- SETTINGS ----------- */
+
+// Typography
 $font-family-site-title: "Caveat", cursive;
 $font-family-base: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-size-base: 1.125rem;
 
-$dark: #2e2e2e;
+// Color System
+$primary: #3fbdf1;
+$secondary: #2e2e2e;
+$dark: $secondary;
+$info: $primary;
 $gray-800: $dark;
+$gray-600: $secondary;
+
+$body-color: $dark;
+
+// Layout
+$cd-footer-height: 4rem;
+$cd-header-height: 6rem;
+
+/* ----------- OBJECTS ----------- */
+.m-n-container {
+  margin: -15px !important;
+}
+.mt-n-container {
+  margin-top: -15px !important;
+}
+.ml-n-container {
+  margin-left: -15px !important;
+}
+.mb-n-container {
+  margin-bottom: -15px !important;
+}
+.mr-n-container {
+  margin-right: -15px !important;
+}
+
+// [text-* sourced from Tailwind CSS by Adam Wathan (MIT License)]
+.text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
+.text-sm {
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
+}
+
+.text-base {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+}
+
+.text-lg {
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-xl {
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
+}
+
+.text-2xl {
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
+}
+
+.text-3xl {
+  font-size: 2rem !important;
+  line-height: 2.25rem !important;
+}
+
+.text-4xl {
+  font-size: 2.25rem !important;
+  line-height: 2.5rem !important;
+}
+
+.text-5xl {
+  font-size: 3rem !important;
+  line-height: 1 !important;
+}
+
+.text-6xl {
+  font-size: 3.75rem !important;
+  line-height: 1 !important;
+}
+
+.text-7xl {
+  font-size: 4.5rem !important;
+  line-height: 1 !important;
+}
+
+.text-8xl {
+  font-size: 6rem !important;
+  line-height: 1 !important;
+}
+
+.text-9xl {
+  font-size: 8rem !important;
+  line-height: 1 !important;
+}
+
+// [rounded-* sourced from Tailwind CSS by Adam Wathan (MIT License)]
+
+.rounded-none {
+  border-radius: 0px !important;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-md {
+  border-radius: 0.375rem !important;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.rounded-2xl {
+  border-radius: 1rem !important;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
+.rounded-full {
+  border-radius: 9999px !important;
+}
+
+// Layout
+.container {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* ----------- BOOTSTRAP ----------- */
 // Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap.scss";
 

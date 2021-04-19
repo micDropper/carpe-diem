@@ -1,14 +1,17 @@
 <template>
-  <b-navbar class="cd-header bg-dark">
-    <b-navbar-brand class="cd-header__title text-white">
+  <b-navbar class="cd-header bg-dark px-4">
+    <b-navbar-brand class="cd-header__title text-3xl text-white">
       <div>
         CARPE Diem
       </div>
-      <div class="cd-header__subtitle">Suicide Prevention</div>
+      <div class="cd-header__subtitle text-xl">Suicide Prevention</div>
     </b-navbar-brand>
 
     <b-navbar-nav class="ml-auto">
-      <b-button variant="light" class="cd-header__help-button">
+      <b-button
+        variant="light"
+        class="cd-header__help-button text-base rounded-xl"
+      >
         QUICK HELP
       </b-button>
     </b-navbar-nav>
@@ -25,21 +28,17 @@ export default {
 @import "~@/assets/styles/index";
 
 .cd-header {
-  height: 6rem;
+  height: $cd-header-height;
 
   .cd-header__title {
     font-family: $font-family-site-title;
-    font-size: 2rem;
-    font-weight: bold;
 
     .cd-header__subtitle {
-      font-size: 1.25rem;
       font-weight: 100;
     }
   }
 
   .cd-header__help-button {
-    border-radius: 0.5rem;
     padding: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
