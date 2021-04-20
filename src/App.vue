@@ -5,18 +5,18 @@
       <router-view />
     </div>
     <Footer />
+    <UpdateToast />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
-import update from "./mixins/update";
+import UpdateToast from "./components/UpdateToast.vue";
 
 export default {
-  components: { Header, Footer },
-  name: "App",
-  mixins: [update]
+  components: { Header, Footer, UpdateToast },
+  name: "App"
 };
 </script>
 
