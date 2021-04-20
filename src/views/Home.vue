@@ -1,22 +1,24 @@
 <template>
   <div class="cd-home">
-    <div class="cd-home__top w-100">
-      <div class="cd-home__yellow-background position-absolute">
-        <YellowWavyBackground class="vw-100" />
-      </div>
+    <div class="cd-home__top position-relative">
+      <YellowWavyBackground
+        class="cd-home__yellow-background clamp-viewport-x position-absolute h-75"
+      />
 
-      <SittingPerson class="cd-home__sitting-person w-100" />
+      <SittingPerson class="cd-home__sitting-person h-100 w-100" />
     </div>
 
-    <div class="cd-home__bottom w-100">
-      <div class="d-flex flex-column align-items-center my-3">
-        <div
-          class="font-size-lg text-dark font-weight-bold text-center px-4 my-3"
-        >
+    <div
+      class="cd-home__bottom overflow-auto d-flex justify-content-center align-items-center w-100"
+    >
+      <div
+        class="cd-home__bottom__content d-flex flex-column align-items-center justify-content-start h-100"
+      >
+        <div class="text-dark font-weight-bold text-center px-4 mb-1">
           Are you concerned about yourself or someone else?
         </div>
 
-        <div class="d-flex justify-content-between w-100 my-3">
+        <div class="d-flex justify-content-between w-100 mb-1">
           <b-button
             variant="primary"
             class="text-white rounded-xl w-100 mr-2 py-3"
@@ -31,9 +33,7 @@
           </b-button>
         </div>
 
-        <div
-          class="font-size-lg text-dark font-weight-bold text-center px-4 my-3"
-        >
+        <div class="text-dark font-weight-bold text-center px-4">
           I'm just here to learn
         </div>
       </div>
@@ -63,23 +63,30 @@ export default {
   ) !important;
 
   .cd-home__top {
-    height: 60% !important;
+    height: 50% !important;
+
+    .cd-home__sitting-person {
+      z-index: 2 !important;
+    }
+
+    .cd-home__yellow-background {
+      z-index: -1 !important;
+    }
+
+    @include media-breakpoint-up(sm) {
+      height: 60% !important;
+    }
   }
 
   .cd-home__bottom {
-    height: 40% !important;
+    height: 50% !important;
+
+    @include media-breakpoint-up(sm) {
+      height: 40% !important;
+      .cd-home__bottom__content {
+        width: 30rem !important;
+      }
+    }
   }
-}
-
-.cd-home__sitting-person {
-  z-index: 2 !important;
-  margin-top: 5.2rem;
-
-  height: 20rem;
-}
-
-.cd-home__yellow-background {
-  z-index: -1 !important;
-  left: 0;
 }
 </style>

@@ -11,6 +11,7 @@ $font-family-base: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-size-base: 1.125rem;
+$enable-responsive-font-sizes: true;
 
 // Color System
 $primary: #3fbdf1;
@@ -151,6 +152,13 @@ $cd-header-height: 6rem;
 .container {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
+}
+
+.clamp-viewport-x {
+  // Expand to width of viewport
+  width: 100vw !important;
+  // Align to viewport edge
+  left: calc(-50vw + 50%) !important;
 }
 
 /* ----------- BOOTSTRAP ----------- */
