@@ -1,6 +1,9 @@
 <template>
-  <b-navbar class="cd-header bg-dark px-4">
-    <b-navbar-brand class="cd-header__title text-3xl text-white">
+  <b-navbar sticky class="cd-header bg-dark position-sticky px-4">
+    <b-navbar-brand
+      class="cd-header__title text-3xl text-white"
+      @click="$router.push({ name: 'Home' })"
+    >
       <div>
         CARPE Diem
       </div>
@@ -11,6 +14,7 @@
       <b-button
         variant="light"
         class="cd-header__help-button text-base rounded-xl"
+        @click="$router.push({ name: 'QuickHelp' })"
       >
         QUICK HELP
       </b-button>

@@ -14,12 +14,12 @@ $font-size-base: 1.125rem;
 $enable-responsive-font-sizes: true;
 
 // Color System
-$primary: #3fbdf1;
-$secondary: #2e2e2e;
-$dark: $secondary;
-$info: $primary;
+$primary: #2e2e2e;
+$secondary: #3fbdf1;
+$dark: $primary;
+$info: $secondary;
 $gray-800: $dark;
-$gray-600: $secondary;
+$gray-600: $primary;
 
 $body-color: $dark;
 
@@ -154,11 +154,33 @@ $cd-header-height: 6rem;
   padding-right: 1.5rem !important;
 }
 
-.clamp-viewport-x {
+.clamp-viewport-x--absolute {
+  position: absolute !important;
   // Expand to width of viewport
   width: 100vw !important;
   // Align to viewport edge
   left: calc(-50vw + 50%) !important;
+}
+
+.clamp-viewport-x {
+  // Expand to width of viewport
+  width: 100vw !important;
+  // Align to viewport edge
+  margin-left: calc(-50vw + 50%) !important;
+
+  // Variants
+  &--absolute {
+    position: absolute !important;
+    // Align to viewport edge
+    left: calc(-50vw + 50%) !important;
+  }
+  &--relative {
+    position: relative !important;
+    // Expand to width of viewport
+    width: 100vw !important;
+    // Align to viewport edge
+    margin-left: calc(-50vw + 50%) !important;
+  }
 }
 
 /* ----------- BOOTSTRAP ----------- */

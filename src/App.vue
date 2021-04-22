@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <div class="container">
+    <div>
       <router-view />
     </div>
     <Footer />
@@ -20,4 +20,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
