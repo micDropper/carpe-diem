@@ -34,10 +34,12 @@
             </div>
           </div>
           <div class="w-50 ml-2">
-            <b-button
-              class="text-white font-weight-bold w-100 py-3 px-4 rounded-xl"
-              >Call hotline</b-button
-            >
+            <a href="tel:18002738255">
+              <b-button
+                class="text-white font-weight-bold w-100 py-3 px-4 rounded-xl"
+                >Call hotline</b-button
+              >
+            </a>
           </div>
         </div>
 
@@ -48,10 +50,12 @@
             </div>
           </div>
           <div class="w-50 ml-2">
-            <b-button
-              class="text-white font-weight-bold w-100 py-3 px-4 rounded-xl"
-              >Send text</b-button
-            >
+            <a href="sms:741741;?&body=HOME">
+              <b-button
+                class="text-white font-weight-bold w-100 py-3 px-4 rounded-xl"
+                >Send text</b-button
+              >
+            </a>
           </div>
         </div>
 
@@ -62,10 +66,12 @@
             </div>
           </div>
           <div class="w-50 ml-2">
-            <b-button
-              class="text-white font-weight-bold w-100 py-3 px-4 rounded-xl"
-              >Call 911</b-button
-            >
+            <a href="tel:911">
+              <b-button
+                class="text-white font-weight-bold w-100 py-3 px-4 rounded-xl"
+                >Call 911</b-button
+              >
+            </a>
           </div>
         </div>
       </div>

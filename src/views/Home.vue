@@ -32,16 +32,19 @@
           >
             Myself
           </b-button>
-          <b-button
-            class="font-weight-bold text-white rounded-xl w-100 ml-2 py-3"
-          >
-            Someone Else
-          </b-button>
+          <router-link :to="{ name: 'Learn' }" class="w-100 ml-2 ">
+            <b-button class="font-weight-bold text-white rounded-xl w-100 py-3">
+              Someone Else
+            </b-button>
+          </router-link>
         </div>
 
-        <div class="text-secondary font-weight-bold text-center px-4">
+        <router-link
+          :to="{ name: 'Learn' }"
+          class="text-secondary font-weight-bold text-center px-4"
+        >
           I'm just here to learn
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
