@@ -5,7 +5,9 @@ import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
 import PortalVue from "portal-vue";
 import "./assets/styles/index.scss";
 import router from "./router";
+import icons from "./modules/icons";
 
+icons();
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 Vue.use(PortalVue);

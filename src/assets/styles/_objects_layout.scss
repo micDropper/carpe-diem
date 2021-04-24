@@ -1,0 +1,39 @@
+// Layout
+
+.container {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.clamp-viewport-x--absolute {
+  position: absolute !important;
+  // Expand to width of viewport
+  width: 100vw !important;
+  // Align to viewport edge
+  left: calc(-50vw + 50%) !important;
+}
+
+.clamp-viewport-x {
+  // Expand to width of viewport
+  width: 100vw !important;
+  // Align to viewport edge
+  margin-left: calc(-50vw + 50%) !important;
+
+  // Variants
+  &--absolute {
+    position: absolute !important;
+    // Align to viewport edge
+    left: calc(-50vw + 50%) !important;
+  }
+  &--relative {
+    position: relative !important;
+    // Expand to width of viewport
+    width: 100vw !important;
+    // Align to viewport edge
+    margin-left: calc(-50vw + 50%) !important;
+  }
+}
+
+.z-background {
+  z-index: -1 !important;
+}

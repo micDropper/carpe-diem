@@ -1,3 +1,3 @@
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 
-export default [faPlus];
+export default [faPhoneAlt];

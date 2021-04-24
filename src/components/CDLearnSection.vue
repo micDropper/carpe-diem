@@ -1,26 +1,27 @@
 <template>
   <div>
-    <h2 class="cd-learn-section__heading font-weight-bold text-primary">
-      <slot name="heading">
-        <!-- SLOT: HEADING -->
-      </slot>
+    <div class="py-3" @click="open = !open">
+      <h2 class="cd-learn-section__heading font-weight-bold text-primary m-0">
+        <slot name="heading">
+          <!-- SLOT: HEADING -->
+        </slot>
 
-      <b-icon
-        :icon="`triangle${open ? '-fill' : ''}`"
-        variant="secondary"
-        class="font-weight-bold text-2xl float-right bv-no-focus-ring"
-        :rotate="open ? 60 : -30"
-        @click="open = !open"
-      />
-    </h2>
-
+        <b-icon
+          :icon="`triangle${open ? '-fill' : ''}`"
+          variant="secondary"
+          class="text-2xl float-right bv-no-focus-ring mr-4"
+          :class="{ 'cd-learn-section__triangle--open': open }"
+          :rotate="open ? 60 : -30"
+        />
+      </h2>
+    </div>
     <b-collapse v-model="open">
       <slot name="body">
         <!-- SLOT: BODY -->
       </slot>
     </b-collapse>
 
-    <hr />
+    <hr class="bg-dark m-0" />
   </div>
 </template>
 
@@ -42,5 +43,9 @@ export default {
   &::first-letter {
     color: $secondary !important;
   }
+}
+
+.cd-learn-section__triangle--open {
+  margin-right: 1rem !important;
 }
 </style>
