@@ -22,18 +22,25 @@
       <div
         class="cd-home__bottom__content d-flex flex-column align-items-center justify-content-start h-100"
       >
-        <div class="text-dark font-weight-bold text-center px-4 mb-1">
+        <div class="text-dark font-weight-bold text-center px-4 mb-3">
           Are you concerned about yourself or someone else?
         </div>
 
-        <div class="d-flex justify-content-between w-100 mb-1">
-          <b-button
-            class="font-weight-bold text-white rounded-xl w-100 mr-2 py-3"
-          >
-            Myself
-          </b-button>
-          <router-link :to="{ name: 'Learn' }" class="w-100 ml-2 ">
-            <b-button class="font-weight-bold text-white rounded-xl w-100 py-3">
+        <div
+          class="cd-home__bottom__btn-row d-flex justify-content-between w-100 mb-3"
+        >
+          <router-link :to="{ name: 'Learn' }" class="w-100 mx-1">
+            <b-button
+              class="font-weight-bold text-white rounded-xl w-100 h-100 px-3"
+            >
+              Myself
+            </b-button>
+          </router-link>
+
+          <router-link :to="{ name: 'Learn' }" class="w-100 mx-1 ">
+            <b-button
+              class="font-weight-bold text-white rounded-xl w-100 h-100 px-3"
+            >
               Someone Else
             </b-button>
           </router-link>
@@ -97,6 +104,10 @@ export default {
 
   .cd-home__bottom {
     height: 50% !important;
+
+    .cd-home__bottom__btn-row {
+      height: 4rem;
+    }
 
     @include media-breakpoint-up(sm) {
       height: 40% !important;
