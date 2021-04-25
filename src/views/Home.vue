@@ -78,11 +78,11 @@ export default {
     100vh - (#{$cd-header-height} + #{$cd-footer-height})
   ) !important;
 
-  // @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
-  //   height: calc(
-  //     100vw - (#{$cd-header-height} + #{$cd-footer-height})
-  //   ) !important;
-  // }
+  @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+    height: calc(
+      100vw - (#{$cd-header-height} + #{$cd-footer-height})
+    ) !important;
+  }
 
   .cd-home__top {
     height: 50% !important;

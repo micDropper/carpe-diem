@@ -21,21 +21,22 @@ export default {
     window.screen.orientation.lock("portrait").catch(e => {
       console.log(e);
     });
+    window.screen.lockOrientation("portrait");
   }
 };
 </script>
 
 <style lang="scss" scoped>
-// @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
-//   .cd-app {
-//     transform: rotate(-90deg) !important;
-//     transform-origin: left top !important;
-//     width: 100vh !important;
-//     height: 100vw !important;
-//     overflow-x: hidden !important;
-//     position: absolute !important;
-//     top: 100% !important;
-//     left: 0 !important;
-//   }
-// }
+@media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+  .cd-app {
+    transform: rotate(-90deg) !important;
+    transform-origin: left top !important;
+    width: 100vh !important;
+    height: 100vw !important;
+    overflow-x: hidden !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+  }
+}
 </style>
