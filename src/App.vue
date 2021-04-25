@@ -22,6 +22,7 @@ export default {
       console.log(e);
     });
     window.screen.lockOrientation("portrait");
+    document.documentElement.requestFullscreen();
   }
 };
 </script>
