@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/styles/index";
 
-@media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: landscape) {
+@media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
   .cd-app {
     transform: rotate(-90deg) !important;
     transform-origin: left top !important;

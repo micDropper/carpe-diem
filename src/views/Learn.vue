@@ -63,7 +63,7 @@ export default {
 ::v-deep .cd-long-page-layout__top.cd-long-page-layout__top {
   max-height: 60vh !important;
 
-  @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: landscape) {
+  @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
     max-height: 60vw !important;
   }
 }
@@ -72,7 +72,7 @@ export default {
   .cd-long-page-layout__top__content.cd-long-page-layout__top__content.cd-long-page-layout__top__content {
   height: 60vh !important;
 
-  @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: landscape) {
+  @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
     height: 60vw !important;
   }
 }

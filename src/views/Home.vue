@@ -78,7 +78,7 @@ export default {
     100vh - (#{$cd-header-height} + #{$cd-footer-height})
   ) !important;
 
-  @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "lg")) and (orientation: landscape) {
+  @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
     height: calc(
       100vw - (#{$cd-header-height} + #{$cd-footer-height})
     ) !important;
