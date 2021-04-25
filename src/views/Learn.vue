@@ -60,10 +60,18 @@ export default {
 // Bootstrap's CSS uses the !important keyword, so we do too unfortunately
 ::v-deep .cd-long-page-layout__top.cd-long-page-layout__top {
   max-height: 60vh !important;
+
+  @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+    max-height: 60vw !important;
+  }
 }
 
 ::v-deep
   .cd-long-page-layout__top__content.cd-long-page-layout__top__content.cd-long-page-layout__top__content {
   height: 60vh !important;
+
+  @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+    height: 60vw !important;
+  }
 }
 </style>

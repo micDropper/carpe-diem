@@ -108,13 +108,28 @@ export default {
     100vh - (#{$cd-header-height} + #{$cd-footer-height})
   ) !important;
 
+  @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+    min-height: calc(
+      100vw - (#{$cd-header-height} + #{$cd-footer-height})
+    ) !important;
+  }
+
   .cd-long-page-layout__top {
     max-height: 50vh !important;
+
+    @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+      max-height: 50vw !important;
+    }
+
     top: $cd-header-height !important;
     z-index: -1;
 
     .cd-long-page-layout__top__content {
       height: 50vh !important;
+
+      @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+        height: 50vw !important;
+      }
     }
 
     .cd-long-page-layout__top__fade-container {
