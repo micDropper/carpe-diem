@@ -17,8 +17,8 @@ import UpdateToast from "./components/UpdateToast.vue";
 export default {
   components: { Header, Footer, UpdateToast },
   name: "App",
-  mounted() {
-    screen.orientation.lock("portrait-primary").catch(e => {
+  created() {
+    window.screen.orientation.lock("portrait").catch(e => {
       console.log(e);
     });
   }
