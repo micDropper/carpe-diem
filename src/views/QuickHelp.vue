@@ -63,7 +63,7 @@
 <script>
 import KneelingPerson from "../components/svg-wrappers/KneelingPerson.vue";
 import LongPageLayout from "../components/LongPageLayout.vue";
-import CDQuickHelpRow from "../components/CDQuickHelpRow.vue";
+import CDQuickHelpRow from "../modules/quick-help/CDQuickHelpRow.vue";
 import { detect } from "detect-browser";
 
 export default {

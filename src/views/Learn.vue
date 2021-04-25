@@ -33,12 +33,12 @@
 <script>
 import UmbrellaPerson from "../components/svg-wrappers/UmbrellaPerson.vue";
 import LongPageLayout from "../components/LongPageLayout.vue";
-import AskSection from "../components/AskSection.vue";
-import ConnectSection from "../components/ConnectSection.vue";
-import ReferSection from "../components/ReferSection.vue";
-import PlanSection from "../components/PlanSection.vue";
-import EncourageSection from "../components/EncourageSection.vue";
-import DiemSection from "../components/DiemSection.vue";
+import AskSection from "../modules/learn/AskSection";
+import ConnectSection from "../modules/learn/ConnectSection.vue";
+import ReferSection from "../modules/learn/ReferSection.vue";
+import PlanSection from "../modules/learn/PlanSection.vue";
+import EncourageSection from "../modules/learn/EncourageSection.vue";
+import DiemSection from "../modules/learn/DiemSection.vue";
 
 export default {
   components: {
@@ -63,6 +63,7 @@ export default {
 ::v-deep .cd-long-page-layout__top.cd-long-page-layout__top {
   max-height: 60vh !important;
 
+  // Enforce portrait mode on small devices
   @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
     max-height: 60vw !important;
   }
@@ -72,6 +73,7 @@ export default {
   .cd-long-page-layout__top__content.cd-long-page-layout__top__content.cd-long-page-layout__top__content {
   height: 60vh !important;
 
+  // Enforce portrait mode on small devices
   @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
     height: 60vw !important;
   }

@@ -17,11 +17,16 @@ import UpdateToast from "./components/UpdateToast.vue";
 export default {
   components: { Header, Footer, UpdateToast },
   name: "App",
-  created() {
-    window.screen.orientation.lock("portrait").catch(e => {
-      console.log(e);
-    });
-    window.screen.lockOrientation("portrait");
+  mounted() {
+    /**
+     * Attempt to lock the orientation to portrait via the drafted (as of April, 2021) ScreenOrientation API,
+     * or the deprecated lockOrientation API.
+     */
+    window.screen.orientation.lock &&
+      window.screen.orientation.lock("portrait").catch(e => {
+        console.log(e);
+      });
+    window.screen.lockOrientation && window.screen.lockOrientation("portrait");
   }
 };
 </script>
@@ -29,6 +34,7 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/styles/index";
 
+// Enforce portrait mode on small devices
 @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
   .cd-app {
     transform: rotate(-90deg) !important;

@@ -13,6 +13,7 @@
   left: calc(-50vw + 50%) !important;
 
   // Compensate for portait-lock rotation
+  // Enforce portrait mode on small devices
   @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
     width: 100vh !important;
     left: calc(-50vh + 50%) !important;
@@ -26,6 +27,7 @@
   margin-left: calc(-50vw + 50%) !important;
 
   // Compensate for portait-lock rotation
+  // Enforce portrait mode on small devices
   @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
     width: 100vh !important;
     margin-left: calc(-50vh + 50%) !important;
@@ -38,6 +40,7 @@
     left: calc(-50vw + 50%) !important;
 
     // Compensate for portait-lock rotation
+    // Enforce portrait mode on small devices
     @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
       left: calc(-50vh + 50%) !important;
     }
@@ -49,6 +52,7 @@
     // Align to viewport edge
     margin-left: calc(-50vw + 50%) !important;
 
+    // Enforce portrait mode on small devices
     @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
       width: 100vh !important;
       left: calc(-50vh + 50%) !important;

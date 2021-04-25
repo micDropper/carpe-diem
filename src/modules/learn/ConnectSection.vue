@@ -16,6 +16,9 @@
           Make the conversation a comfortable place to discuss negative mood and
           emotion. Ask simple, open-ended questions.
         </p>
+        <ul>
+          <li class="font-italic">How have you been feeling?</li>
+        </ul>
       </div>
 
       <div class="mt-4">
@@ -24,6 +27,13 @@
           Take time to hear the response and notice any risk factors. Respond
           with reflection and empathy, and ask follow-up questions.
         </p>
+
+        <ul>
+          <li class="font-italic">
+            I'm sorry to hear that you've been down. How long have you been
+            feeling like this?
+          </li>
+        </ul>
       </div>
 
       <div class="mt-4">
@@ -32,13 +42,20 @@
           Express your concerns and let the person know that you take this
           seriously.
         </p>
+
+        <ul>
+          <li class="font-italic">
+            I'm worried about you and I want to help. This is serious business.
+            You might think that no one cares, but that's not true.
+          </li>
+        </ul>
       </div>
     </template>
   </CDLearnSection>
 </template>
 
 <script>
-import CDCalloutBox from "./CDCalloutBox.vue";
+import CDCalloutBox from "@/components/CDCalloutBox.vue";
 import CDLearnSection from "./CDLearnSection.vue";
 export default {
   name: "ConnectSection",
@@ -48,5 +65,3 @@ export default {
   }
 };
 </script>
-
-CDCalloutBox
