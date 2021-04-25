@@ -28,7 +28,7 @@
           </template>
         </CDQuickHelpRow>
 
-        <CDQuickHelpRow href="sms:741741;?&body=HOME">
+        <CDQuickHelpRow :href="`sms:741741${platformSMSSentinel}body=HOME`">
           <template #description>
             Crisis Text Line
           </template>
@@ -64,8 +64,27 @@
 import KneelingPerson from "../components/svg-wrappers/KneelingPerson.vue";
 import LongPageLayout from "../components/LongPageLayout.vue";
 import CDQuickHelpRow from "../components/CDQuickHelpRow.vue";
+import { detect } from "detect-browser";
+
 export default {
   components: { LongPageLayout, KneelingPerson, CDQuickHelpRow },
-  name: "QuickHelp"
+  name: "QuickHelp",
+  computed: {
+    /**
+     * Returns the SMS sentinel for Android (?) vs Apple (&).
+     */
+    platformSMSSentinel() {
+      return this.browser.name === "safari" ||
+        this.browser.os === "Mac OS" ||
+        this.browser.os === "iOS"
+        ? "&"
+        : "?";
+    }
+  },
+  data() {
+    return {
+      browser: detect()
+    };
+  }
 };
 </script>

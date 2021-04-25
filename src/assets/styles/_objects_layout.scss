@@ -11,6 +11,12 @@
   width: 100vw !important;
   // Align to viewport edge
   left: calc(-50vw + 50%) !important;
+
+  // // Compensate for portait-lock rotation
+  // @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+  //   width: 100vh !important;
+  //   left: calc(-50vh + 50%) !important;
+  // }
 }
 
 .clamp-viewport-x {
@@ -19,11 +25,22 @@
   // Align to viewport edge
   margin-left: calc(-50vw + 50%) !important;
 
+  // // Compensate for portait-lock rotation
+  // @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+  //   width: 100vh !important;
+  //   margin-left: calc(-50vh + 50%) !important;
+  // }
+
   // Variants
   &--absolute {
     position: absolute !important;
     // Align to viewport edge
     left: calc(-50vw + 50%) !important;
+
+    // // Compensate for portait-lock rotation
+    // @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+    //   left: calc(-50vh + 50%) !important;
+    // }
   }
   &--relative {
     position: relative !important;
@@ -31,6 +48,11 @@
     width: 100vw !important;
     // Align to viewport edge
     margin-left: calc(-50vw + 50%) !important;
+
+    @media screen and (min-width: 280px) and (max-width: 767px) and (orientation: landscape) {
+      width: 100vh !important;
+      left: calc(-50vh + 50%) !important;
+    }
   }
 }
 

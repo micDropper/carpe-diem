@@ -4,11 +4,23 @@
     no-auto-hide
     toaster="b-toaster-bottom-right"
     header-class="d-none"
+    solid
   >
-    New content available!
-    <b-button @click="refreshApp" variant="primary" size="sm" class="mx-1"
-      >Refresh</b-button
-    >
+    <div class="d-flex align-items-center">
+      New content available!
+      <b-button
+        @click="refreshApp"
+        variant="success"
+        size="sm"
+        class="text-white rounded-xl px-3 py-2 ml-2"
+        >Refresh</b-button
+      >
+      <b-button-close
+        @click="$bvToast.hide('update-toast')"
+        class="pl-3 pr-2
+      py-2 mr-n2"
+      />
+    </div>
   </b-toast>
 </template>
 
@@ -29,3 +41,5 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped></style>
