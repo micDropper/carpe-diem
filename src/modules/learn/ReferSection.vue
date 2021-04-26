@@ -64,6 +64,41 @@
           </template>
         </ReferRow>
       </CDCalloutBox>
+
+      <div class="mt-4">
+        <h3 class="font-weight-bold text-secondary">
+          Tips for a Successful Referral
+        </h3>
+      </div>
+
+      <div class="mt-4">
+        <h4 class="font-weight-bold text-secondary">Problem-Solve Options</h4>
+        <p>
+          People who are struggling are likely to find reasons why they cannot
+          get help - help them see ways that they can get help!
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <h4 class="font-weight-bold text-secondary">
+          Encourage Immediate Action
+        </h4>
+        <p>
+          Offer to initiate the call, take notes, etc.
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <h4 class="font-weight-bold text-secondary">
+          Respond to Reluctance with More Palatable Alternatives
+        </h4>
+        <p>
+          Any additional contact or help is likely to be better than nothing.
+          For example, encourage them to keep in touch with a close family
+          member or friend; spending more time around people and engaged in
+          activities can be helpful.
+        </p>
+      </div>
     </template>
   </CDLearnSection>
 </template>
