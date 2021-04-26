@@ -30,7 +30,7 @@ export default {
   name: "CDLearnSection",
   data() {
     return {
-      open: true
+      open: false
     };
   }
 };
