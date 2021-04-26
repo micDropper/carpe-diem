@@ -108,31 +108,14 @@ export default {
     100vh - (#{$cd-header-height} + #{$cd-footer-height})
   ) !important;
 
-  // Enforce portrait mode on small devices
-  @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
-    min-height: calc(
-      100vw - (#{$cd-header-height} + #{$cd-footer-height})
-    ) !important;
-  }
-
   .cd-long-page-layout__top {
     max-height: 50vh !important;
-
-    // Enforce portrait mode on small devices
-    @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
-      max-height: 50vw !important;
-    }
 
     top: $cd-header-height !important;
     z-index: -1;
 
     .cd-long-page-layout__top__content {
       height: 50vh !important;
-
-      // Enforce portrait mode on small devices
-      @media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
-        height: 50vw !important;
-      }
     }
 
     .cd-long-page-layout__top__fade-container {

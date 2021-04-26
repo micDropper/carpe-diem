@@ -6,6 +6,7 @@
     </div>
     <Footer />
     <UpdateToast />
+    <LandscapeNotSupportedScreen />
   </div>
 </template>
 
@@ -13,9 +14,10 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import UpdateToast from "./components/UpdateToast.vue";
+import LandscapeNotSupportedScreen from "./views/LandscapeNotSupportedScreen.vue";
 
 export default {
-  components: { Header, Footer, UpdateToast },
+  components: { Header, Footer, UpdateToast, LandscapeNotSupportedScreen },
   name: "App",
   mounted() {
     /**
@@ -31,20 +33,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import "~@/assets/styles/index";
-
-// Enforce portrait mode on small devices
-@media screen and (min-width: map-get($grid-breakpoints, "xs")) and (max-width: map-get($grid-breakpoints, "md")) and (orientation: landscape) {
-  .cd-app {
-    transform: rotate(-90deg) !important;
-    transform-origin: left top !important;
-    width: 100vh !important;
-    height: 100vw !important;
-    overflow-x: hidden !important;
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

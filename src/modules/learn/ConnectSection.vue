@@ -1,10 +1,10 @@
 <template>
   <CDLearnSection>
-    <template v-slot:heading>
+    <template #heading>
       Connect
     </template>
 
-    <template v-slot:body>
+    <template #body>
       <CDCalloutBox>
         The C in CARPE Diem stands for connect. There are three important
         aspects to connect: evoke, listen, and respond.

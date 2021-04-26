@@ -1,10 +1,10 @@
 <template>
   <CDLearnSection>
-    <template v-slot:heading>
+    <template #heading>
       Plan for Safety
     </template>
 
-    <template v-slot:body>
+    <template #body>
       I'm plan content
     </template>
   </CDLearnSection>

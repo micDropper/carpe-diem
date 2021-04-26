@@ -1,6 +1,18 @@
 @import "~bootstrap/scss/functions";
 
 // Color System
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
 $primary: #2e2e2e;
 $secondary: #3fbdf1;
 $dark: $primary;
@@ -8,6 +20,7 @@ $info: $secondary;
 $gray-800: $dark;
 $gray-600: $primary;
 $secondary-lighter: #edfaff;
+$text-muted: $gray-500;
 
 $body-color: $dark;
 
@@ -21,7 +34,6 @@ $grid-breakpoints: (
 ) !default;
 
 // Grid containers
-
 $container-max-widths: (
   sm: 434px,
   md: 720px,

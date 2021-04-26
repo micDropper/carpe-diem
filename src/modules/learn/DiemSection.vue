@@ -1,10 +1,10 @@
 <template>
   <CDLearnSection>
-    <template v-slot:heading>
+    <template #heading>
       <span class="text-secondary"> Diem </span>(Today!)
     </template>
 
-    <template v-slot:body>
+    <template #body>
       I'm diem content
     </template>
   </CDLearnSection>

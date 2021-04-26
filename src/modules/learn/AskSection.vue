@@ -1,10 +1,10 @@
 <template>
   <CDLearnSection>
-    <template v-slot:heading>
+    <template #heading>
       Ask
     </template>
 
-    <template v-slot:body>
+    <template #body>
       <CDCalloutBox>
         Ask specifically about suicide. Studies show that asking about suicide
         does not increase someone’s risk.
@@ -88,6 +88,13 @@
         </ul>
       </div>
       <!-- END: DON'T SECTION -->
+
+      <!-- START: BE PREPARED -->
+      <div class="mt-4">
+        <h3 class="font-weight-bold text-secondary">Be Prepared</h3>
+        <p>Be prepared for a yes or a no, and stay calm.</p>
+      </div>
+      <!-- END: BE PREPARED -->
     </template>
   </CDLearnSection>
 </template>

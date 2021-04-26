@@ -1,10 +1,10 @@
 <template>
   <CDLearnSection>
-    <template v-slot:heading>
+    <template #heading>
       Encourage Hope
     </template>
 
-    <template v-slot:body>
+    <template #body>
       I'm encourage content
     </template>
   </CDLearnSection>
