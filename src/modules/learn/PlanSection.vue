@@ -32,7 +32,10 @@
         <h4 class="font-weight-bold text-secondary">
           Suicidal Crises are Often Brief
         </h4>
-        <p>Even creating a delay can save a life.</p>
+        <p>
+          Even creating a delay can save a life.
+          <b-icon icon="hourglass-split" class="text-danger" />
+        </p>
       </div>
 
       <div class="mt-4">
@@ -53,6 +56,7 @@
         <p>
           Suicide attempts with a firearm are lethal 90% of the time; even if
           they do attempt with something else, they are more likely to survive.
+          <font-awesome-icon icon="skull" class="ml-1" />
         </p>
       </div>
 
@@ -73,7 +77,10 @@
       </div>
 
       <ul class="pl-4">
-        <li>Lock firearms and excess medications.</li>
+        <li>
+          Lock firearms and excess medications.
+          <b-icon icon="shield-lock-fill" />
+        </li>
         <ul>
           <li>
             Use or offer someone lock boxes and/or locking devices such as cable
@@ -92,18 +99,27 @@
       </ul>
 
       <ul class="pl-4">
-        <li>Temporarily store firearms with a friend or family member.</li>
+        <li>
+          Temporarily store firearms with a friend or family member.
+          <font-awesome-icon icon="users" class="text-xl" />
+        </li>
         <ul>
           <li>
-            Abide by applicable laws. This is the best option since it creates
-            physical distance. The Sherriff's office will store firearms
+            <strong
+              >This is the best option since it creates physical
+              distance.</strong
+            >
+            Abide by applicable laws. The Sherriff's office will store firearms
             temporarily.
           </li>
         </ul>
       </ul>
 
       <ul class="pl-4">
-        <li>Dispose of unneeded or expired medication.</li>
+        <li>
+          Dispose of unneeded or expired medication.
+          <font-awesome-icon icon="capsules" class="text-xl" />
+        </li>
       </ul>
 
       <div class="mt-4">
@@ -245,6 +261,7 @@
           individual). Collaborate with the at-risk person to find people that
           can help reduce their access. Communicate clearly with the helper and
           suggest a plan to reduce access.
+          <font-awesome-icon icon="hands-helping" class="text-xl" />
         </p>
       </div>
     </template>

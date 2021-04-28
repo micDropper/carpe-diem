@@ -15,6 +15,7 @@
         <p>
           Make the conversation a comfortable place to discuss negative mood and
           emotion. Ask simple, open-ended questions.
+          <font-awesome-icon :icon="['far', 'smile']" class="text-xl" />
         </p>
         <ul>
           <li class="font-italic">How have you been feeling?</li>
@@ -41,6 +42,7 @@
         <p>
           Express your concerns and let the person know that you take this
           seriously.
+          <font-awesome-icon icon="hard-hat" class="text-xl align-text-top" />
         </p>
 
         <ul>

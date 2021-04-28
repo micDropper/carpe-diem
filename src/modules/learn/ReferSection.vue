@@ -76,6 +76,7 @@
         <p>
           People who are struggling are likely to find reasons why they cannot
           get help - help them see ways that they can get help!
+          <font-awesome-icon icon="first-aid" class="text-xl" />
         </p>
       </div>
 
@@ -85,6 +86,7 @@
         </h4>
         <p>
           Offer to initiate the call, take notes, etc.
+          <font-awesome-icon icon="hand-holding-medical" class="text-xl" />
         </p>
       </div>
 

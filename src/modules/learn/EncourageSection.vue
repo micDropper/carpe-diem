@@ -7,13 +7,14 @@
     <template #body>
       <CDCalloutBox>
         Remind them that you genuinely care.
+        <font-awesome-icon :icon="['far', 'smile']" class="text-lg" />
       </CDCalloutBox>
 
       <div class="mt-4">
         <h3 class="font-weight-bold text-secondary">Review Plans</h3>
         <p>
           Writing down agreed-upon steps for referral and means reduction can be
-          helpful.
+          helpful. <font-awesome-icon icon="edit" class="text-xl" />
         </p>
       </div>
 

@@ -1,3 +1,33 @@
-import { faPhoneAlt, faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPhoneAlt,
+  faMapMarkedAlt,
+  faSkull,
+  faSmile,
+  faFirstAid,
+  faHandHoldingMedical,
+  faUsers,
+  faCapsules,
+  faHandsHelping,
+  faEdit,
+  faUserInjured,
+  faHardHat,
+  faSearch,
+  faDiagnoses
+} from "@fortawesome/free-solid-svg-icons";
 
-export default [faPhoneAlt, faMapMarkedAlt];
+export default [
+  faPhoneAlt,
+  faMapMarkedAlt,
+  faSkull,
+  faSmile,
+  faFirstAid,
+  faHandHoldingMedical,
+  faUsers,
+  faCapsules,
+  faHandsHelping,
+  faEdit,
+  faUserInjured,
+  faHardHat,
+  faSearch,
+  faDiagnoses
+];

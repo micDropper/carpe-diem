@@ -8,6 +8,7 @@
       <CDCalloutBox>
         Do not put this off until tomorrow - suicidal behavior is unpredictable,
         and tomorrow might be too late.
+        <b-icon icon="hourglass-split" class="text-danger" />
       </CDCalloutBox>
 
       <div class="mt-4">
@@ -23,6 +24,7 @@
 
       <h4 class="font-weight-bold font-italic text-secondary">
         What might prevent you from initiating a CARPE Diem converation?
+        <font-awesome-icon icon="search" class="text-xl" />
       </h4>
     </template>
   </CDLearnSection>
