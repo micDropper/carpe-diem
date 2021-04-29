@@ -41,14 +41,14 @@ $container-max-widths: (
   xl: 1140px
 ) !default;
 
-@import "~bootstrap/scss/variables";
-
 // Components
 $border-width: 1px;
 
 $box-shadow-sm: 0 -0.125rem 0.25rem rgba($black, 0.075);
 $box-shadow: 0 -0.75rem 0.75rem rgba($black, 0.15);
 $box-shadow-lg: 0 -1rem 3rem rgba($black, 0.175);
+
+$component-active-bg: $secondary;
 
 // Typography
 $font-family-site-title: "Caveat", cursive;
@@ -61,3 +61,5 @@ $enable-responsive-font-sizes: true;
 // Layout
 $cd-footer-height: 4rem;
 $cd-header-height: 6rem;
+
+@import "~bootstrap/scss/variables";

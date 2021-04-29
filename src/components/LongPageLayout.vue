@@ -45,12 +45,10 @@
         </div>
       </div>
       <div class="bg-white">
-        <div class="container">
-          <slot name="body">
-            <!-- SLOT: BODY -->
-            I AM BODY CONTENT
-          </slot>
-        </div>
+        <slot name="body">
+          <!-- SLOT: BODY -->
+          I AM BODY CONTENT
+        </slot>
       </div>
     </div>
   </div>

@@ -29,7 +29,7 @@
         <div
           class="cd-home__bottom__btn-row d-flex justify-content-between w-100 mb-3"
         >
-          <router-link :to="{ name: 'Learn' }" class="w-100 mx-1">
+          <router-link :to="{ name: 'QuickHelp' }" class="w-100 mx-1">
             <b-button
               class="font-weight-bold text-white rounded-xl w-100 h-100 px-3"
             >

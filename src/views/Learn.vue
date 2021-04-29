@@ -14,17 +14,19 @@
     </template>
 
     <template #body>
-      <div class="d-flex flex-column h-100 pt-3 pb-5">
-        <div class="font-weight-bold">
-          Click on each step to view:
-        </div>
+      <div class="container">
+        <div class="d-flex flex-column h-100 pt-3 pb-5">
+          <div class="font-weight-bold">
+            Click on each step to view:
+          </div>
 
-        <ConnectSection />
-        <AskSection />
-        <ReferSection />
-        <PlanSection />
-        <EncourageSection />
-        <DiemSection />
+          <ConnectSection />
+          <AskSection />
+          <ReferSection />
+          <PlanSection />
+          <EncourageSection />
+          <DiemSection />
+        </div>
       </div>
     </template>
   </LongPageLayout>
