@@ -6,8 +6,8 @@
     </p>
 
     <!-- START: ITEM 1 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">1.</strong>Little interest or pleasure in doing
         things
       </label>
@@ -20,21 +20,15 @@
           <div>{{ getAnswerDescription(questionnaire.items.one) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.one"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.one" min="0" max="3" />
         </div>
       </div>
     </div>
     <!-- END: ITEM 1 -->
 
     <!-- START: ITEM 2 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">2.</strong> Feeling down, depressed, or hopeless
       </label>
       <div class="d-flex align-items-center flex-column">
@@ -46,21 +40,15 @@
           <div>{{ getAnswerDescription(questionnaire.items.two) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.two"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.two" min="0" max="3" />
         </div>
       </div>
     </div>
     <!-- END: ITEM 2 -->
 
     <!-- START: ITEM 3 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">3.</strong> Trouble falling or staying asleep, or
         sleeping too much
       </label>
@@ -73,21 +61,15 @@
           <div>{{ getAnswerDescription(questionnaire.items.three) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.three"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.three" min="0" max="3" />
         </div>
       </div>
     </div>
     <!-- END: ITEM 3 -->
 
     <!-- START: ITEM 4 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">4.</strong> Feeling tired or having little energy
       </label>
       <div class="d-flex align-items-center flex-column">
@@ -99,21 +81,15 @@
           <div>{{ getAnswerDescription(questionnaire.items.four) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.four"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.four" min="0" max="3" />
         </div>
       </div>
     </div>
     <!-- END: ITEM 4 -->
 
     <!-- START: ITEM 5 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">5.</strong> Poor appetite or overeating
       </label>
       <div class="d-flex align-items-center flex-column">
@@ -125,21 +101,15 @@
           <div>{{ getAnswerDescription(questionnaire.items.five) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.five"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.five" min="0" max="3" />
         </div>
       </div>
     </div>
     <!-- END: ITEM 5 -->
 
     <!-- START: ITEM 6 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">6.</strong> Feeling bad about yourself or that you
         are a failure or have let yourself or your family down
       </label>
@@ -152,21 +122,15 @@
           <div>{{ getAnswerDescription(questionnaire.items.six) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.six"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.six" min="0" max="3" />
         </div>
       </div>
     </div>
     <!-- END: ITEM 6 -->
 
     <!-- START: ITEM 7 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">7.</strong> Trouble concentrating on things, such
         as reading the newspaper or watching television
       </label>
@@ -179,21 +143,15 @@
           <div>{{ getAnswerDescription(questionnaire.items.seven) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.seven"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.seven" min="0" max="3" />
         </div>
       </div>
     </div>
     <!-- END: ITEM 7 -->
 
     <!-- START: ITEM 8 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">8.</strong> Moving or speaking so slowly that
         other people could have noticed. Or the opposite being so figety or
         restless that you have been moving around a lot more than usual
@@ -207,21 +165,15 @@
           <div>{{ getAnswerDescription(questionnaire.items.eight) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.eight"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.eight" min="0" max="3" />
         </div>
       </div>
     </div>
     <!-- END: ITEM 8 -->
 
     <!-- START: ITEM 9 -->
-    <div class="mb-4">
-      <label class="m-0" for="question-1"
+    <div class="mb-5">
+      <label class="m-0 pb-2" for="question-1"
         ><strong class="mr-2">9.</strong> Thoughts that you would be better off
         dead, or of hurting yourself
       </label>
@@ -234,13 +186,7 @@
           <div>{{ getAnswerDescription(questionnaire.items.nine) }}</div>
         </div>
         <div class="w-75">
-          <b-form-input
-            id="question-1"
-            v-model="questionnaire.items.nine"
-            type="range"
-            min="0"
-            max="3"
-          />
+          <CDRangeSlider v-model="questionnaire.items.nine" min="0" max="3" />
         </div>
       </div>
     </div>
@@ -257,7 +203,6 @@
         <div>{{ questionnaire.score }} / 27</div>
       </div>
     </div>
-
     <b-progress
       max="27"
       height="2rem"
@@ -272,8 +217,12 @@
 </template>
 
 <script>
+import CDRangeSlider from "./components/CDRangeSlider.vue";
+
 export default {
   name: "CDQuestionnaire",
+
+  components: { CDRangeSlider },
 
   data() {
     return {
@@ -336,3 +285,5 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped></style>

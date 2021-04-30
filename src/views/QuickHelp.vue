@@ -62,8 +62,10 @@
         </div>
       </div>
 
-      <div class="container bg-dark text-white font-weight-bold py-4">
-        Take this 9-item questionnaire to determine your depression severity:
+      <div class="container-fluid bg-dark text-white font-weight-bold py-4">
+        <div class="container">
+          Take this 9-item questionnaire to determine your depression severity:
+        </div>
       </div>
 
       <div class="container">

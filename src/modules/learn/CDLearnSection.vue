@@ -1,19 +1,19 @@
 <template>
   <div>
-    <div class="py-3" @click="open = !open">
+    <div class="py-3 d-flex justify-content-between" @click="open = !open">
       <h2 class="cd-learn-section__heading font-weight-bold text-primary m-0">
         <slot name="heading">
           <!-- SLOT: HEADING -->
         </slot>
-
-        <b-icon
-          :icon="`triangle${open ? '-fill' : ''}`"
-          variant="secondary"
-          class="text-2xl float-right bv-no-focus-ring mr-4"
-          :class="{ 'cd-learn-section__triangle--open': open }"
-          :rotate="open ? 60 : -30"
-        />
       </h2>
+
+      <b-icon
+        :icon="`triangle${open ? '-fill' : ''}`"
+        variant="secondary"
+        class="text-2xl bv-no-focus-ring mr-4"
+        :class="{ 'cd-learn-section__triangle--open': open }"
+        :rotate="open ? 60 : -30"
+      />
     </div>
     <b-collapse v-model="open">
       <slot name="body">
