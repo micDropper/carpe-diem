@@ -11,8 +11,8 @@
     class="position-relative w-100"
     :style="cssVars"
   >
-    <div class="cd-range__cover-left"></div>
-    <div class="cd-range__cover-right"></div>
+    <div class="cd-range__cover-left position-absolute rounded-pill"></div>
+    <div class="cd-range__cover-right position-absolute rounded-pill"></div>
 
     <b-form-input
       :id="uid"
@@ -55,7 +55,10 @@ export default {
     cssVars() {
       return {
         "--percentAdvanced": `${this.percentAdvanced}%`,
-        "--advanceWithheld": `${(this.percentAdvanced / 100) * 1}rem`
+        "--advanceWithheld": `${(this.percentAdvanced / 100) *
+          this.thumbDiameter}rem`,
+        "--thumbDiameter": `${this.thumbDiameter}rem`,
+        "--rangeHeight": `${this.thumbDiameter + 0.4}rem`
       };
     },
 
@@ -66,7 +69,10 @@ export default {
 
   data() {
     return {
-      uid: uuid()
+      uid: uuid(),
+      // Diameter of the thumb handle in rem units.
+      // Corresponds with $custom-range-thumb-width from bootstrap _variables.scss
+      thumbDiameter: 2
     };
   }
 };
@@ -76,19 +82,18 @@ export default {
 // Cover the left side of the slider to require user to drag. This should prevent
 // inadvertently changing the input value if they scroll by on mobile.
 .cd-range__cover-left {
-  height: 1.4rem;
+  height: var(--rangeHeight);
   width: calc(var(--percentAdvanced) - var(--advanceWithheld));
   left: 0;
-  position: absolute;
 }
 
 // Cover the right side of the slider to require the user to drag.
 .cd-range__cover-right {
-  height: 1.4rem;
+  height: var(--rangeHeight);
   width: calc(
-    (100% - var(--percentAdvanced)) - (1rem - var(--advanceWithheld))
+    (100% - var(--percentAdvanced)) -
+      (var(--thumbDiameter) - var(--advanceWithheld))
   );
   right: 0;
-  position: absolute;
 }
 </style>
