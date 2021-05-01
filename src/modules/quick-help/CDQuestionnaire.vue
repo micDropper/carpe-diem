@@ -192,6 +192,7 @@
     </div>
     <!-- END: ITEM 9 -->
 
+    <!-- START: PHQ-9 SCORE -->
     <div class="text-center font-weight-bold">
       <div>
         You may have
@@ -213,6 +214,7 @@
         <span>{{ questionnaire.score }}</span>
       </b-progress-bar>
     </b-progress>
+    <!-- END: PHQ-9 SCORE -->
   </div>
 </template>
 
@@ -226,23 +228,85 @@ export default {
 
   data() {
     return {
+      /**
+       * The PHQ-9 (Patient Health Questionnaire 9) depresssion severity self-assessment.
+       * @type {object} - Dynamic object representing a PHQ-9
+       */
       questionnaire: {
+        /**
+         * The individual items (questions) on the PHQ-9 questionnaire.
+         * @type {object} - PHQ-9 items
+         */
         items: {
+          /**
+           * Question one.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           one: 0,
+
+          /**
+           * Question two.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           two: 0,
+
+          /**
+           * Question three.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           three: 0,
+
+          /**
+           * Question four.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           four: 0,
+
+          /**
+           * Question five.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           five: 0,
+
+          /**
+           * Question six.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           six: 0,
+
+          /**
+           * Question seven.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           seven: 0,
+
+          /**
+           * Question eight.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           eight: 0,
+
+          /**
+           * Question nine.
+           * @type {number} - The given answer. Range: [0, 3]
+           */
           nine: 0
         },
+
+        /**
+         * The overall PHQ-9 score as a sum of the individual question scores (max: 27).
+         * @type {number} - PHQ-9 score
+         */
         get score() {
           return Math.round(
             Object.values(this.items).reduce((a, b) => Number(a) + Number(b), 0)
           );
         },
+
+        /**
+         * The PHQ-9 description of depression severity according to the total score.
+         * @type {string} - PHQ-9 depression severity
+         */
         get scoreMessage() {
           let x = Math.round(this.score);
           return 0 <= x == x <= 4
@@ -257,6 +321,14 @@ export default {
             ? "Severe depression"
             : "";
         },
+
+        /**
+         * The appropariate bootstrap theme color for each possible scoreMessage.
+         * info - usually blue,
+         * warning - usually yellow,
+         * danger - usually red,
+         * @type {string} - the bootstrap theme color
+         */
         get scoreVariant() {
           let categories = {
             "Minimal depression": "info",
@@ -265,7 +337,6 @@ export default {
             "Moderately severe depression": "danger",
             "Severe depression": "danger"
           };
-
           return categories[this.scoreMessage];
         }
       }
@@ -273,6 +344,11 @@ export default {
   },
 
   methods: {
+    /**
+     * Given an answer number, returns the category corresponding to this answer.
+     * @param {number} - The PHQ-9 answer number (0-3)
+     * @returns {string} - The PHQ-9 answer description
+     */
     getAnswerDescription(answerNum) {
       const answers = {
         0: "Not at all",
