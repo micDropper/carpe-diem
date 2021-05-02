@@ -1,0 +1,26 @@
+{
+  "packageId": "xyz.appmaker.vabkqh",
+  "host": "micdropper.github.io",
+  "name": "CARPE Diem",
+  "launcherName": "CARPE Diem",
+  "display": "standalone",
+  "themeColor": "#2E2E2E",
+  "navigationColor": "#000000",
+  "backgroundColor": "#000000",
+  "enableNotifications": false,
+  "startUrl": "/carpe-diem/",
+  "iconUrl": "https://micdropper.github.io/carpe-diem/img/icons/android-chrome-512x512.png",
+  "maskableIconUrl": "https://micdropper.github.io/carpe-diem/img/icons/android-chrome-512x512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "NEW APP",
+  "webManifestUrl": "https://micdropper.github.io/carpe-diem/manifest.json",
+  "fallbackType": "customtabs",
+  "appVersion": "1"
+}

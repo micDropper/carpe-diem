@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <p class="font-weight-bold pt-3">
+  <div class="py-3">
+    <p class="font-weight-bold">
       Over the last 2 weeks, how often have you been bothered by any of the
       following problems?
     </p>
@@ -208,7 +208,7 @@
       max="27"
       height="2rem"
       :variant="questionnaire.scoreVariant"
-      class="mb-4"
+      class="mb-3"
     >
       <b-progress-bar :value="questionnaire.score">
         <span>{{ questionnaire.score }}</span>
@@ -225,6 +225,19 @@ export default {
   name: "CDQuestionnaire",
 
   components: { CDRangeSlider },
+
+  props: {
+    value: Object
+  },
+
+  watch: {
+    questionnaire: {
+      handler(val) {
+        this.$emit("input", val);
+      },
+      deep: true
+    }
+  },
 
   data() {
     return {
@@ -330,7 +343,7 @@ export default {
          * @type {string} - the bootstrap theme color
          */
         get scoreVariant() {
-          let categories = {
+          const categories = {
             "Minimal depression": "info",
             "Mild depression": "warning",
             "Moderate depression": "warning",

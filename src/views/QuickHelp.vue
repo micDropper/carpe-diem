@@ -13,6 +13,7 @@
     </template>
 
     <template #body>
+      <!-- START: CALL/TEXT -->
       <div class="container">
         <div class="d-flex flex-column py-2 h-100">
           <CDQuickHelpRow href="tel:18002738255">
@@ -61,16 +62,47 @@
           </CDQuickHelpRow>
         </div>
       </div>
+      <!-- END: CALL/TEXT -->
 
-      <div class="container-fluid bg-dark text-white font-weight-bold py-4">
+      <!-- START: PHQ-9 -->
+      <div>
+        <div class="container-fluid bg-dark text-white font-weight-bold py-4">
+          <div class="container">
+            Take this 9-item questionnaire to determine your depression
+            severity:
+          </div>
+        </div>
+
         <div class="container">
-          Take this 9-item questionnaire to determine your depression severity:
+          <CDQuestionnaire v-model="questionnaire" />
         </div>
       </div>
+      <!-- END: PHQ-9 -->
 
-      <div class="container">
-        <CDQuestionnaire />
+      <!-- START: SAFETY PLAN -->
+      <div v-if="questionnaire">
+        <div
+          class="container-fluid text-white font-weight-bold py-4"
+          :class="`bg-${questionnaire.scoreVariant}`"
+        >
+          <div class="container">
+            {{ getPlanMessage }}
+          </div>
+        </div>
+
+        <div class="container">
+          <div>
+            <div class="py-3">
+              <p class="font-weight-bold">
+                Who is someone you can call that you trust if you begin to feel
+                like killing yourself?
+              </p>
+              <b-input type="number" />
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- END: SAFETY PLAN -->
     </template>
   </LongPageLayout>
 </template>
@@ -90,6 +122,30 @@ export default {
     CDQuestionnaire
   },
   name: "QuickHelp",
-  mixins: [platformSmsLogic]
+  mixins: [platformSmsLogic],
+
+  computed: {
+    getPlanMessage() {
+      const planMessages = {
+        "Minimal depression":
+          "We're sorry you have some small depression. Would you like to make a safety plan together?",
+        "Mild depression":
+          "We're sorry you have some mild depression. Would you like to make a safety plan together?",
+        "Moderate depression":
+          "We're sorry you've been feeling down. We should make a plan together for your safety:",
+        "Moderately severe depression":
+          "We're sorry you've been feeling down. Let's make a safety plan together for you:",
+        "Severe depression":
+          "We're sorry you've been feeling down and are concerned about you. Let's make a safety plan together:"
+      };
+      return planMessages[this.questionnaire?.scoreMessage];
+    }
+  },
+
+  data() {
+    return {
+      questionnaire: null
+    };
+  }
 };
 </script>
