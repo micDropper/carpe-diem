@@ -11,8 +11,8 @@
     class="position-relative w-100"
     :style="cssVars"
   >
-    <div class="cd-range__cover-left position-absolute rounded-pill"></div>
-    <div class="cd-range__cover-right position-absolute rounded-pill"></div>
+    <div class="cd-range__cover-left position-absolute rounded-r-full"></div>
+    <div class="cd-range__cover-right position-absolute rounded-l-full"></div>
 
     <b-form-input
       :id="uid"
