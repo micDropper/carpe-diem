@@ -119,7 +119,6 @@ const store = new Vuex.Store({
      * @type {number} - PHQ-9 score
      */
     score: state => {
-      console.debug(state.questionnaire, "the questionnaire");
       return Math.round(
         Object.values(state.questionnaire.items).reduce(
           (a, b) => Number(a) + Number(b),
