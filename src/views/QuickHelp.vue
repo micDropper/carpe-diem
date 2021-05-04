@@ -74,19 +74,19 @@
         </div>
 
         <div class="container">
-          <CDQuestionnaire v-model="questionnaire" />
+          <CDQuestionnaire />
         </div>
       </div>
       <!-- END: PHQ-9 -->
 
       <!-- START: SAFETY PLAN -->
-      <div v-if="questionnaire">
+      <div v-if="score !== 0">
         <div
           class="container-fluid text-white font-weight-bold py-4"
-          :class="`bg-${questionnaire.scoreVariant}`"
+          :class="`bg-${scoreVariant}`"
         >
           <div class="container">
-            {{ getPlanMessage }}
+            {{ planMessage }}
           </div>
         </div>
 
@@ -113,39 +113,21 @@ import LongPageLayout from "../components/LongPageLayout.vue";
 import CDQuickHelpRow from "../modules/quick-help/CDQuickHelpRow.vue";
 import CDQuestionnaire from "../modules/quick-help/CDQuestionnaire.vue";
 import platformSmsLogic from "@/mixins/platform-sms-logic";
-
+import { mapGetters } from "vuex";
 export default {
+  name: "QuickHelp",
+
   components: {
     LongPageLayout,
     KneelingPerson,
     CDQuickHelpRow,
     CDQuestionnaire
   },
-  name: "QuickHelp",
+
   mixins: [platformSmsLogic],
 
   computed: {
-    getPlanMessage() {
-      const planMessages = {
-        "Minimal depression":
-          "We're sorry you have some small depression. Would you like to make a safety plan together?",
-        "Mild depression":
-          "We're sorry you have some mild depression. Would you like to make a safety plan together?",
-        "Moderate depression":
-          "We're sorry you've been feeling down. We should make a plan together for your safety:",
-        "Moderately severe depression":
-          "We're sorry you've been feeling down. Let's make a safety plan together for you:",
-        "Severe depression":
-          "We're sorry you've been feeling down and are concerned about you. Let's make a safety plan together:"
-      };
-      return planMessages[this.questionnaire?.scoreMessage];
-    }
-  },
-
-  data() {
-    return {
-      questionnaire: null
-    };
+    ...mapGetters(["score", "planMessage", "scoreVariant"])
   }
 };
 </script>

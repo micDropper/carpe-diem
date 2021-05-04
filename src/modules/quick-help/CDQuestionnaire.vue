@@ -20,7 +20,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.one) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.one" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'one', answer: $event })"
+            :value="questionnaire.items.one"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -40,7 +45,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.two) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.two" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'two', answer: $event })"
+            :value="questionnaire.items.two"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -61,7 +71,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.three) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.three" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'three', answer: $event })"
+            :value="questionnaire.items.three"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -81,7 +96,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.four) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.four" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'four', answer: $event })"
+            :value="questionnaire.items.four"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -101,7 +121,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.five) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.five" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'five', answer: $event })"
+            :value="questionnaire.items.five"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -122,7 +147,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.six) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.six" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'six', answer: $event })"
+            :value="questionnaire.items.six"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -143,7 +173,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.seven) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.seven" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'seven', answer: $event })"
+            :value="questionnaire.items.seven"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -165,7 +200,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.eight) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.eight" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'eight', answer: $event })"
+            :value="questionnaire.items.eight"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -186,7 +226,12 @@
           <div>{{ getAnswerDescription(questionnaire.items.nine) }}</div>
         </div>
         <div class="w-75">
-          <CDRangeSlider v-model="questionnaire.items.nine" min="0" max="3" />
+          <CDRangeSlider
+            @input="setQuestionNum({ questionNum: 'nine', answer: $event })"
+            :value="questionnaire.items.nine"
+            min="0"
+            max="3"
+          />
         </div>
       </div>
     </div>
@@ -197,21 +242,16 @@
       <div>
         You may have
       </div>
-      <div :class="`text-${questionnaire.scoreVariant}`">
+      <div :class="`text-${scoreVariant}`">
         <div>
-          {{ questionnaire.scoreMessage.toLowerCase() }}
+          {{ scoreMessage.toLowerCase() }}
         </div>
-        <div>{{ questionnaire.score }} / 27</div>
+        <div>{{ score }} / 27</div>
       </div>
     </div>
-    <b-progress
-      max="27"
-      height="2rem"
-      :variant="questionnaire.scoreVariant"
-      class="mb-3"
-    >
-      <b-progress-bar :value="questionnaire.score">
-        <span>{{ questionnaire.score }}</span>
+    <b-progress max="27" height="2rem" :variant="scoreVariant" class="mb-3">
+      <b-progress-bar :value="score">
+        <span>{{ score }}</span>
       </b-progress-bar>
     </b-progress>
     <!-- END: PHQ-9 SCORE -->
@@ -220,6 +260,7 @@
 
 <script>
 import CDRangeSlider from "./components/CDRangeSlider.vue";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   name: "CDQuestionnaire",
@@ -230,133 +271,13 @@ export default {
     value: Object
   },
 
-  watch: {
-    questionnaire: {
-      handler(val) {
-        this.$emit("input", val);
-      },
-      deep: true
-    }
-  },
-
-  data() {
-    return {
-      /**
-       * The PHQ-9 (Patient Health Questionnaire 9) depresssion severity self-assessment.
-       * @type {object} - Dynamic object representing a PHQ-9
-       */
-      questionnaire: {
-        /**
-         * The individual items (questions) on the PHQ-9 questionnaire.
-         * @type {object} - PHQ-9 items
-         */
-        items: {
-          /**
-           * Question one.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          one: 0,
-
-          /**
-           * Question two.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          two: 0,
-
-          /**
-           * Question three.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          three: 0,
-
-          /**
-           * Question four.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          four: 0,
-
-          /**
-           * Question five.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          five: 0,
-
-          /**
-           * Question six.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          six: 0,
-
-          /**
-           * Question seven.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          seven: 0,
-
-          /**
-           * Question eight.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          eight: 0,
-
-          /**
-           * Question nine.
-           * @type {number} - The given answer. Range: [0, 3]
-           */
-          nine: 0
-        },
-
-        /**
-         * The overall PHQ-9 score as a sum of the individual question scores (max: 27).
-         * @type {number} - PHQ-9 score
-         */
-        get score() {
-          return Math.round(
-            Object.values(this.items).reduce((a, b) => Number(a) + Number(b), 0)
-          );
-        },
-
-        /**
-         * The PHQ-9 description of depression severity according to the total score.
-         * @type {string} - PHQ-9 depression severity
-         */
-        get scoreMessage() {
-          let x = Math.round(this.score);
-          return 0 <= x == x <= 4
-            ? "Minimal depression"
-            : 5 <= x == x <= 9
-            ? "Mild depression"
-            : 10 <= x == x <= 14
-            ? "Moderate depression"
-            : 15 <= x == x <= 19
-            ? "Moderately severe depression"
-            : 20 <= x == x <= 27
-            ? "Severe depression"
-            : "";
-        },
-
-        /**
-         * The appropariate bootstrap theme color for each possible scoreMessage.
-         * info - usually blue,
-         * warning - usually yellow,
-         * danger - usually red,
-         * @type {string} - the bootstrap theme color
-         */
-        get scoreVariant() {
-          const categories = {
-            "Minimal depression": "info",
-            "Mild depression": "warning",
-            "Moderate depression": "warning",
-            "Moderately severe depression": "danger",
-            "Severe depression": "danger"
-          };
-          return categories[this.scoreMessage];
-        }
-      }
-    };
+  computed: {
+    ...mapGetters(["questionnaire", "scoreVariant", "scoreMessage", "score"])
   },
 
   methods: {
+    ...mapMutations(["setQuestionNum"]),
+
     /**
      * Given an answer number, returns the category corresponding to this answer.
      * @param {number} - The PHQ-9 answer number (0-3)
