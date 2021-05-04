@@ -73,6 +73,9 @@ const store = new Vuex.Store({
   },
 
   getters: {
+    /**
+     * @yields {object} - The PHQ-9 questionnaire
+     */
     questionnaire: state => {
       return state.questionnaire;
     },
@@ -82,7 +85,7 @@ const store = new Vuex.Store({
      * info - usually blue,
      * warning - usually yellow,
      * danger - usually red,
-     * @type {string} - the bootstrap theme color
+     * @yields {string} - the bootstrap theme color
      */
     scoreVariant: (state, getters) => {
       const categories = {
@@ -97,7 +100,7 @@ const store = new Vuex.Store({
 
     /**
      * The PHQ-9 description of depression severity according to the total score.
-     * @type {string} - PHQ-9 depression severity
+     * @yields {string} - PHQ-9 depression severity
      */
     scoreMessage: (state, getters) => {
       let x = Math.round(getters.score);
@@ -116,7 +119,7 @@ const store = new Vuex.Store({
 
     /**
      * The overall PHQ-9 score as a sum of the individual question scores (max: 27).
-     * @type {number} - PHQ-9 score
+     * @yields {number} - PHQ-9 score
      */
     score: state => {
       return Math.round(
@@ -130,7 +133,7 @@ const store = new Vuex.Store({
     /**
      * The message to urge users to make a suicide prevention safety plan according to their depression
      * severity.
-     * @param {string} - The message urging users to make a safety plan
+     * @yields {string} - The message urging users to make a safety plan
      */
     planMessage: (state, getters) => {
       const planMessages = {
