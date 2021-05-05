@@ -18,7 +18,10 @@
         <div class="d-flex flex-column py-2 h-100">
           <CDQuickHelpRow href="tel:18002738255">
             <template #description>
-              National Suicide Lifeline
+              <div>
+                <div>National Suicide Lifeline</div>
+                <div class="text-sm text-muted">1-800-273-8255</div>
+              </div>
             </template>
 
             <template #btn-text>
