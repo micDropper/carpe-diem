@@ -1,0 +1,1 @@
+.cd-range__cover-left[data-v-c388e7ec]{height:var(--rangeHeight);width:calc(var(--percentAdvanced) - var(--advanceWithheld));left:0}.cd-range__cover-right[data-v-c388e7ec]{height:var(--rangeHeight);width:calc(100% - var(--percentAdvanced) - var(--thumbDiameter) + var(--advanceWithheld));right:0}
